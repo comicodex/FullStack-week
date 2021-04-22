@@ -22,9 +22,9 @@ import zipfile
 def download_data():
     
     if "data.zip" not in os.listdir('../data'):
-    r = requests.get(
+        r = requests.get(
         "https://github.com/polyrand/strive-ml-fullstack-public/blob/main/06_org_documentation_scripting/data.zip?raw=true"
-    )
+        )
 
     with open("..data/data.zip", "wb") as f:
         f.write(r.content)
